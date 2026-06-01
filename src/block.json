@@ -1,0 +1,146 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ppb/print-page",
+	"title": "Print Page",
+	"description": "Print the entire page or Section.",
+	"category": "widgets",
+	"keywords": [
+		"print page",
+		"print button",
+		"page print"
+	],
+	"version": "1.3.0",
+	"textdomain": "print-page",
+	"attributes": {
+		"align": {
+			"type": "string",
+			"default": ""
+		},
+		"cId": {
+			"type": "string",
+			"default": ""
+		},
+		"alignment": {
+			"type": "string",
+			"default": "center"
+		},
+		"buttonVariant": {
+			"type": "string",
+			"default": "default"
+		},
+		"isPrintSection": {
+			"type": "boolean",
+			"default": false
+		},
+		"sectionSelector": {
+			"type": "string",
+			"default": ""
+		},
+		"isModal": {
+			"type": "boolean",
+			"default": false
+		},
+		"isHeaderFooter": {
+			"type": "boolean",
+			"default": true
+		},
+		"isBackground": {
+			"type": "boolean",
+			"default": false
+		},
+		"isLayout": {
+			"type": "boolean",
+			"default": false
+		},
+		"removeSelectors": {
+			"type": "string",
+			"default": ""
+		},
+		"isIcon": {
+			"type": "boolean",
+			"default": true
+		},
+		"icon": {
+			"type": "object",
+			"default": {
+				"type": "default",
+				"default": "fcPrinter",
+				"url": ""
+			}
+		},
+		"isText": {
+			"type": "boolean",
+			"default": true
+		},
+		"btnText": {
+			"type": "string",
+			"selector": ".ppbPrintPage button span",
+			"default": "Print"
+		},
+		"btnTypo": {
+			"type": "object",
+			"default": {
+				"fontSize": {
+					"desktop": 22,
+					"tablet": 20,
+					"mobile": 18
+				}
+			}
+		},
+		"btnColors": {
+			"type": "object",
+			"default": {
+				"color": "#4527a4",
+				"bg": "#4527a433"
+			}
+		},
+		"btnHoverColors": {
+			"type": "object",
+			"default": {
+				"color": "#4527a4",
+				"bg": "#4527a433"
+			}
+		},
+		"btnPadding": {
+			"type": "object",
+			"default": {
+				"vertical": "5px",
+				"horizontal": "15px"
+			}
+		},
+		"btnBorder": {
+			"type": "object",
+			"default": {
+				"radius": "5px"
+			}
+		},
+		"btnShadow": {
+			"type": "object",
+			"default": {}
+		},
+		"hoverBtnShadow": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [
+			"wide",
+			"full"
+		],
+		"html": false
+	},
+	"example": {
+		"attributes": {
+			"preview": true
+		}
+	},
+	"editorScript": [
+		"file:./index.js"
+	],
+	"editorStyle": "file:./index.css",
+	"style": "file:./view.css",
+	"render": "file:./render.php",
+	"viewScript": "file:./view.js"
+}
