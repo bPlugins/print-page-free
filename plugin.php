@@ -3,13 +3,13 @@
  * Plugin Name: Print Page Block – Print Full Page or Specific Section
  * Plugin URI: https://bplugins.com/products/print-page/
  * Description: Print the entire page with single click
- * Version: 1.3.0
+ * Version: 1.3.1
  * Author: bPlugins
  * Author URI: https://bplugins.com
  * License: GPLv3
  * License URI: https://www.gnu.org/licenses/gpl-3.0.txt
  * Text Domain: print-page
- * Requires at least: 6.5+
+ * Requires at least: 6.5
  * Tested up to: 7.0
  * Requires PHP: 7.1
  */
@@ -20,7 +20,7 @@ if ( !defined( 'ABSPATH' ) ) { exit; }
 if ( function_exists( 'pp_fs' ) ) {
 	pp_fs()->set_basename( true, __FILE__ );
 } else {
-    define( 'PPB_VERSION', isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '1.3.0' );
+    define( 'PPB_VERSION', isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '1.3.1' );
     define( 'PPB_DIR_URL', plugin_dir_url( __FILE__ ) );
     define( 'PPB_DIR_PATH', plugin_dir_path( __FILE__ ) );
 

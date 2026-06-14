@@ -5,7 +5,7 @@
 [![WordPress Support](https://img.shields.io/badge/WordPress-6.5+-blue.svg?style=flat-square&logo=wordpress)](https://wordpress.org/plugins/print-page/)
 [![PHP Support](https://img.shields.io/badge/PHP-7.1+-777bb4.svg?style=flat-square&logo=php)](https://wordpress.org/plugins/print-page/)
 [![GPLv3 License](https://img.shields.io/badge/License-GPLv3-green.svg?style=flat-square)](https://wordpress.org/plugins/print-page/)
-[![Stable Version](https://img.shields.io/badge/Version-1.3.0-blue.svg?style=flat-square)](https://wordpress.org/plugins/print-page/)
+[![Stable Version](https://img.shields.io/badge/Version-1.3.1-blue.svg?style=flat-square)](https://wordpress.org/plugins/print-page/)
 
 **Print Page Block** is a lightweight, high-performance, and fully responsive Gutenberg block and shortcode plugin for WordPress. It allows your website visitors to print the entire page or only a specific section (defined by custom CSS selectors) with a single click.
 

@@ -2,9 +2,9 @@
 Contributors: bplugins, abuhayat, freemius, shamim10
 Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, print page, print button, print section, Gutenberg block
-Requires at least: 6.5+
+Requires at least: 6.5
 Tested up to: 7.0
-Stable tag: 1.3.0
+Stable tag: 1.3.1
 Requires PHP: 7.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -145,7 +145,10 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 == Changelog ==
 
-= 1.3.0 - 01 Jun, 2026 =
+= 1.3.1 - 14 Jun, 2026 =
+* **Updated:** Modernized the admin settings dashboard layout.
+
+= 1.3.0 - 02 Jun, 2026 =
 * **Added:** Added uninstall data clean-up option in the admin settings dashboard to wipe plugin configurations on deletion.
 * **Added:** Added uninstall.php script to securely remove all custom post types and options if the cleanup setting is enabled.
 * **Added:** Added Gulp task configurations (gulpfile.js and package.json) to automate cross-platform release packaging.
