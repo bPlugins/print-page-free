@@ -20,8 +20,11 @@ if ( !defined( 'ABSPATH' ) ) { exit; }
 if ( function_exists( 'pp_fs' ) ) {
 	pp_fs()->set_basename( true, __FILE__ );
 } else {
+    // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedConstantFound
     define( 'PPB_VERSION', isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '1.3.2' );
+    // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedConstantFound
     define( 'PPB_DIR_URL', plugin_dir_url( __FILE__ ) );
+    // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedConstantFound
     define( 'PPB_DIR_PATH', plugin_dir_path( __FILE__ ) );
 
 	if ( ! function_exists( 'pp_fs' ) ) {
