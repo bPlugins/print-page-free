@@ -1,4 +1,4 @@
-import { gutenbergTabIcon, shortcodeTabIcon } from "./icons";
+import { gutenbergTabIcon, shortcodeTabIcon, elementorTabIcon } from "./icons";
 
 const slug = 'print-page';
 
@@ -27,7 +27,6 @@ export const dashboardInfo = (info) => {
 		pages: {
 			org: `https://wordpress.org/plugins/${slug}/`,
 			landing: `https://bplugins.com/products/${slug}/`,
-			// docs: `https://bplugins.com/docs/${slug}/`,
 			docs: `https://bblockswp.com/docs/${slug}`,
 			pricing: `https://bplugins.com/products/${slug}/pricing`,
 		},
@@ -126,7 +125,7 @@ export const pricingInfo = {
 }
 
 export const welcomeInfo = (adminUrl) => ({
-	keywords: ['Print Page', 'Gutenberg Block', 'Shortcode', 'Layout Customization', 'Section Print', 'Orientation Settings'],
+	keywords: ['Print Page', 'Gutenberg Block', 'Shortcode', 'Layout Customization', 'Section Print'],
 	keywordsLabel: 'Features',
 	gettingStarted: {
 		tabs: [
@@ -175,10 +174,38 @@ export const welcomeInfo = (adminUrl) => ({
 						body: 'Copy the generated shortcode (e.g. <code>[print_page id="123"]</code>) from the print button editor screen or list, and paste it into any post, page, or widget.'
 					}
 				]
+			},
+			{
+				key: 'elementor',
+				label: 'Elementor',
+				icon: elementorTabIcon,
+				steps: [
+					{
+						num: 1,
+						title: 'Create a New Print Button',
+						body: 'Go to <strong>Print Page -> Add New</strong>. Enter a title, configure your print settings and styles, and click <strong>Publish</strong> to generate a shortcode.',
+						link: { url: `${adminUrl}post-new.php?post_type=print_page`, label: 'Add New' }
+					},
+					{
+						num: 2,
+						title: 'Open Elementor Editor',
+						body: 'Open the Elementor editor on any page or post. Search for the <strong>Shortcode</strong> widget and drag it to your desired layout section.'
+					},
+					{
+						num: 3,
+						title: 'Embed Shortcode',
+						body: 'Paste the generated shortcode (e.g. <code>[print_page id="123"]</code>) into the Shortcode widget content settings, and then update/publish the page.'
+					}
+				]
 			}
 		]
 	},
 	changelogs: [
+		{
+			type: 'new',
+			version: '1.3.2 - 13 Jul, 2026',
+			list: ['Added: Elementor getting started instructions.'],
+		},
 		{
 			type: 'update',
 			version: '1.3.1 - 14 Jun, 2026',
