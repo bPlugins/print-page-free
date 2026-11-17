@@ -1,5 +1,5 @@
 === Print Page Block – Print Full Page or Specific Section ===
-Contributors: bplugins, abuhayat, freemius, shamim10
+Contributors: bplugins, abuhayat, freemius, sojibislam9878
 Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, print page, print button, print section, Gutenberg block
 Requires at least: 6.5
