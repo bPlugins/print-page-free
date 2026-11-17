@@ -60,9 +60,19 @@ if ( function_exists( 'pp_fs' ) ) {
 	require_once PPB_DIR_PATH . 'includes/core.php';
 
 	add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), function( $links ) {
-		$help_link = '<a href="' . admin_url( 'edit.php?post_type=print_page&page=ppb_demo_page' ) . '" style="color:#FF7A00;font-weight:bold;">Help & Demos</a>';
+		if ( current_user_can( 'manage_options' ) ) {
+			$links[] = '<a href="' . esc_url( admin_url( 'edit.php?post_type=print_page&page=ppb_demo_page' ) ) . '" style="color:#FF7A00;font-weight:bold;">' . esc_html__( 'Help & Demos', 'print-page' ) . '</a>';
 
-		$links[] = $help_link;
+			$expiry     = class_exists( '\PPB\Admin\PPB_PromoBanner' ) ? \PPB\Admin\PPB_PromoBanner::EXPIRATION_DATE : '2026-12-05 23:59:59';
+			$is_expired = time() > strtotime( $expiry );
+
+			$is_premium = ( function_exists( 'ppbIsPremium' ) && ppbIsPremium() ) || ( function_exists( 'pp_fs' ) && pp_fs()->can_use_premium_code() );
+
+			if ( ! $is_expired && ! $is_premium ) {
+				$bfcm_url = 'https://bplugins.com/products/print-page/pricing/?utm_source=admin&utm_medium=plugins&utm_campaign=bfcm2026';
+				$links[]  = '<a href="' . esc_url( $bfcm_url ) . '" target="_blank" rel="noopener noreferrer" style="color:#d63638;font-weight:bold;">' . esc_html__( 'Upgrade to Pro & Save 45% This Black Friday!', 'print-page' ) . '</a>';
+			}
+		}
 
 		return $links;
 	} );
